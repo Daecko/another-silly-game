@@ -5,9 +5,10 @@ function getWeather () {
     var long = lonIn.value;
 
     // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
-    const apiKey = '0c8b9491574113f197b7d7f5a3835535';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
-
+    const apiKey = document.getElementById("apiKey");
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey.value}&units=metric`;
+    //const apiUrlReverse = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&limit={limit}&appid=${apiKey.value}`;
+    //const apiUrlByLoc = `http://api.openweathermap.org/geo/1.0/direct?q={cityname}&limit={limit}&appid=${apiKey.value}`;
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {

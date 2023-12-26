@@ -9,14 +9,19 @@
 </head>
 <body>
     <header>
-        <h1>Either a memory game or some other puzzle game</h1>
+        <h1>This is currently not a game</h1>
     </header>
     <main>
-        Testing OpenWather API calls
+        Testing OpenWather API calls. <br>
+        Now, as much as i would like to just put my API Key in the code and let you try the thing without anything else this is
+        not a good practice, i dont know the implications of putting my free API key in public display, but i wont risk it,
+        so ill let you get your key <a href="https://openweathermap.org/">here</a>.
+        <p>Once you get your key (is not that complicated) you can type/paste it here:</p>
+        <input type="text" id="apiKey" placeholder="OpenWeather API Key">
         <p>Enter latitude</p>
-        <input type="number" name="latIn" id="latIn" placeholder="Enter latitude" value="0">
+        <input type="number" id="latIn" placeholder="from -90 to 90" value="0" step="0.000001" min="-90" max="90" required>
         <p>Enter longitude</p>
-        <input type="number" name="lonIn" id="lonIn" placeholder="Enter longitude" value="0"> <br>
+        <input type="number" id="lonIn" placeholder="from -180 to 180" value="0" step="0.000001" min="-180" max="180" required> <br>
         <button onclick="getWeather()">Get weather</button>
         <div id="weatherInfo"></div>
 
